@@ -1,0 +1,91 @@
+
+ .grid-container{
+  background: black;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+
+  grid-template-areas:
+  "input input input"
+  
+ }
+ 
+.inputRow{
+background: red;
+min-height: 20vh;
+max-height: 100px;
+grid-area: input;
+padding-top: 25px;
+
+}
+/* input{
+  width: 100%;
+  height: 100%;
+} */
+.leftButtons{
+
+display: grid;
+  box-sizing: border-box;
+  background: green;
+  padding: 5%;
+  
+  min-width: 200px;
+  max-width: 1000px;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: minmax(20px, 200px);
+grid-auto-rows: minmax(20px, 200px);
+grid-gap: 20px;
+justify-content: stretch;
+align-content: stretch;
+}
+
+.rightButtons{
+
+display: grid;
+  box-sizing: border-box;
+  background: yellow;
+  padding: 5%;
+  
+  min-width: 200px;
+  max-width: 1000px;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: minmax(20px, 200px);
+grid-auto-rows: minmax(20px, 200px);
+grid-gap: 20px;
+justify-content: stretch;
+align-content: stretch;
+
+}
+.inner-container{
+  display: grid;
+  box-sizing: border-box;
+  background: blue;
+  padding: 5%;
+  
+  min-width: 200px;
+  max-width: 1000px;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: minmax(20px, 200px);
+grid-auto-rows: minmax(20px, 200px);
+grid-gap: 20px;
+justify-content: stretch;
+align-content: stretch;
+
+
+}
+
+button{
+  font-size: 2em;
+  border-radius: 20%;
+  min-width: 10px;
+  min-height: 40px;
+}
+input{
+  
+  border-radius: 10%;
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+  
+}
+
