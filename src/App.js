@@ -87,7 +87,7 @@ const equalsHandler = () =>{
   
   let currentValue;
   
-  if ((currentState.currentInputField !== '') && (currentState.prevOperation !== '='))
+  if ((currentState.currentInputField !== '') && (currentState.prevOperation !== '=') && (currentState.prevOperation !== '') )
   {
     currentValue = eval(`${Number(currentState.currentStack)} ${currentState.prevOperation} ${Number(currentState.currentInputField)}`);
     setState({...currentState, currentStack: [currentValue], currentInputField: currentValue, prevOperation: '='});
@@ -111,10 +111,10 @@ const equalsHandler = () =>{
 
     <div className="leftButtons">
   <button id="X2"onClick={operationsHandler.bind(this, 'sqrt')}>sqrt</button>
-  <button id="exp" onClick={operationsHandler.bind(this, 'X2')}>exp</button>
+  <button id="exp" onClick={operationsHandler.bind(this, 'X2')}>X<sup>2</sup></button>
   <button id="C" onClick={operationsHandler.bind(this, 'C')}>C</button>
   <button id="CE" onClick={operationsHandler.bind(this, 'CE')}>CE</button>
-  <button id="X3"  onClick={operationsHandler.bind(this, 'X3')}>X^3</button>
+  <button id="X3"  onClick={operationsHandler.bind(this, 'X3')}>X<sup>3</sup></button>
  
 
 </div>
